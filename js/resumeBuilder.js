@@ -1,7 +1,6 @@
 
 
 
-
 var name = "Joey Laird"
 
 var formattedName = HTMLheaderName.replace("%data%", name);
@@ -90,7 +89,7 @@ var work = {
 	]
 };
 
-
+function displayWork() {
 
 for(job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);	
@@ -103,16 +102,15 @@ for(job in work.jobs) {
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedEmployerTitle);
 	$(".work-entry:last").append(formattedDates);
-	$(".work-entry:last").append(formattedDescription);
 	$(".work-entry:last").append(formattedLocation);
+	$(".work-entry:last").append(formattedDescription);
+	
 	  
 }
 
+}
 
-
- // Here’s an example of some code that would add the location of one your companies to the page:
- //   * `var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);`
- //   * `$(".work-entry:last").append(formattedLocation);`
+displayWork();
 
 var projects = {
 	"projects": [
@@ -144,8 +142,6 @@ var projects = {
 
 
 
-// var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-// var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 /********** displayHeader **********/
 if(bio.skills.length > 0) {
@@ -164,10 +160,6 @@ if(bio.skills.length > 0) {
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-
-// $("#header").append(formattedEmail);
-// $("#header").append(formattedLocation);
-// $("#header").append(education.schools.name(0));
 
 
 

@@ -97,6 +97,7 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  display: inline-block;
 
 }
 
@@ -202,6 +203,9 @@ span {
   display: inline-block;
   margin-right: 5px;
 }
+#skills-h3, #skills {
+    display: inline-block;
+  }
 
 }
 
@@ -215,13 +219,10 @@ span {
   .welcome-message {
     display: none;
   }
-  .contacts {
+  .contacts, #skills-h3 {
     display: block;
   }
 
-  #skills-h3, #skills {
-    display: block;
-  }
 }
 
 #map {
