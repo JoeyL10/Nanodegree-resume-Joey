@@ -74,18 +74,18 @@ var work = {
 		{
 		"employer": "Pershing LLC",
 		"title": "Associate in Government P&S",
-		"location": "Lake Mary",
+		"location": "Lake Mary, FL",
 		"dates": "2007-2009",
-		"description": "Government Trading Support"
+		"description": "Provide post-trade processing support to clients who trade Government bonds such as treasuries, agencies and mortgaged-backed securities."
 		}, 
 
 
 		{
 		"employer": "Pershing LLC",
 		"title": "Vice President of Global P&S",
-		"location": "Lake Mary",
+		"location": "Lake Mary, FL",
 		"dates": "2009-Present",
-		"description": "Foreign Trading Support"
+		"description": "Manage post-trade processing support for clients who trade non-dollar securities and US equities with other banks and broker-dealers."
 		} 
 	]
 };
@@ -99,10 +99,12 @@ for(job in work.jobs) {
 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates)
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedEmployerTitle);
-	// $(".work-entry:last").append(formattedDates);
-
+	$(".work-entry:last").append(formattedDates);
+	$(".work-entry:last").append(formattedDescription);
+	$(".work-entry:last").append(formattedLocation);
 	  
 }
 
