@@ -25,7 +25,7 @@ var bio = {
 	"skills": [
 		"Finance", "CSS", "Design", "Javascript"
 	],
-	"bioPic" : "images/fry.jpg"
+	"bioPic" : "images/joey.jpg"
 	
 };
 
