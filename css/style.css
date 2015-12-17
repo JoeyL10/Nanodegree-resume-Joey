@@ -160,7 +160,10 @@ ul {
   padding-bottom: 15px;
 }
 
-
+#mapDiv {
+  height: 500px;
+  width: 500px;
+}
 
 .biopic {
   float: left;
