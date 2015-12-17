@@ -1,16 +1,6 @@
 
 
-
-var name = "Joey Laird"
-
-var formattedName = HTMLheaderName.replace("%data%", name);
-
-var role = "Web Developer"
-
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+// ***** Bio Section ***** //
 
 
 
@@ -34,21 +24,29 @@ var bio = {
 	
 };
 
+function displayBio() {
+
+var name = "Joey Laird"
+var formattedName = HTMLheaderName.replace("%data%", name);
+var role = "Web Developer"
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#header").append(formattedMobile);
+$("#header, #footerContacts").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#header").append(formattedEmail);
+$("#header, #footerContacts").append(formattedEmail);
 var formattedGit = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#header").append(formattedGit);
+$("#header, #footerContacts").append(formattedGit);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#header").append(formattedTwitter);
+$("#header, #footerContacts").append(formattedTwitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#header").append(formattedLocation);
+$("#header, #footerContacts").append(formattedLocation);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedWelcome);
 var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").append(formattedPic);
-
 
 
 
@@ -66,29 +64,86 @@ if(bio.skills.length > 0) {
 	 
     }
 
+
+}
+
+displayBio();
+
+    //***** Education Section ***** //
+
 var education = {
 	"schools": [
 	{ 
-		"name": "UCF",
-		"location": "Orlando",
+		"name": "University of Central Florida",
+		"location": "Orlando, FL",
 		"degree": "BSBA",
-		"majors": ["Accounting", "Finance"],
-		"dates": "2002-2006",
-		"url": "http://.ucf.edu"
+		"major": ["Accounting", " Finance"],
+		"dates": "2002-2006"
 		
 	}
 	],
 
-	"onlineCourses": [
+	"onlineClasses": [
 				{
-				"title": ["Javascript Basics", "Responsive Web Design Fundamentals"],
+				"title": ["Intro to HTML and CSS", " Javascript Basics", " Responsive Web Design Fundamentals"],
 				"school": "Udacity",
 				"dates": "2015-2016",
-				"url": "www.udacity.com"
+				"url": "www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 				 
 			}
 		]
 };
+
+
+function displayEducation() {
+ for (school in education.schools) {
+ 	$("#education").append(HTMLschoolStart);
+
+ 	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+ 	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+ 	var formattedNameDegree = formattedName + formattedDegree;
+ 	$(".education-entry:last").append(formattedNameDegree);
+ 	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+ 	$(".education-entry:last").append(formattedLocation);
+ 	var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+ 	$(".education-entry:last").append(formattedDates);
+ 	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+ 	$(".education-entry:last").append(formattedMajor);
+ }
+
+
+}
+displayEducation();
+
+
+/*** function to display online classes **/
+
+function displayOnlineClasses() {
+ for (course in education.onlineClasses) {
+ 	$("#education").append(HTMLonlineClasses);
+
+ 	var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[course].title);
+ 	var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineClasses[course].school);
+ 	var formattedTitleSchool = formattedTitle + formattedSchool;
+ 	var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineClasses[course].dates);
+ 	var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineClasses[course].url);
+ 	$(".online-entry:last").append(formattedTitleSchool);
+ 	$(".online-entry:last").append(formattedOnlineDates);
+ 	$(".online-entry:last").append(formattedOnlineUrl);
+ }
+
+
+}
+displayOnlineClasses();
+
+
+
+// var HTMLonlineClasses = '<h3>Online Classes</h3>';
+// var HTMLonlineTitle = '<a href="#">%data%';
+// var HTMLonlineSchool = ' - %data%</a>';
+// var HTMLonlineDates = '<div class="date-text">%data%</div>';
+// var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
 
 var work = {
 	"jobs": [
@@ -126,9 +181,7 @@ for(job in work.jobs) {
 	$(".work-entry:last").append(formattedEmployerTitle);
 	$(".work-entry:last").append(formattedDates);
 	$(".work-entry:last").append(formattedLocation);
-	$(".work-entry:last").append(formattedDescription);
-	
-	  
+	$(".work-entry:last").append(formattedDescription);	  
 }
 
 }
@@ -143,21 +196,24 @@ var projects = {
 		"description": "My portfolio site was my first project and it was built using responsive design fundamentals.  It is being hosted on Github and includes links to my projects that came after.",
 		"images": ["images/projectpic.jpg", "images/featwork.jpg"]
 	},
-	{
-		"title": "Sample Project 2",
-		"dates": "2016",
-		"description": "Put some text here",
-		"images": ["images/projectpic.jpg", "images/featwork.jpg"]
+	
+		//*** Placeholder for future projects ***//
 
-	},
+	// {
+	// 	"title": "Sample Project 2",
+	// 	"dates": "2016",
+	// 	"description": "Put some text here",
+	// 	"images": ["images/projectpic.jpg", "images/featwork.jpg"]
 
-	{
-		"title": "Sample Project 3",
-		"dates": "2016",
-		"description": "Put some text here",
-		"images": ["images/projectpic.jpg", "images/featwork.jpg"]
+	// },
 
-	}
+	// {
+	// 	"title": "Sample Project 3",
+	// 	"dates": "2016",
+	// 	"description": "Put some text here",
+	// 	"images": ["images/projectpic.jpg", "images/featwork.jpg"]
+
+	// }
 ]
 
 
@@ -201,7 +257,6 @@ $("#mapDiv").append(googleMap);
 
 
 
-
 // function inName(name) {
 // 	var name = window.name;
 // 	name = name.trim().split(" ");
@@ -211,7 +266,6 @@ $("#mapDiv").append(googleMap);
 
 // 	return name[0] +" "+name[1];
 // }
-
 
 // $("#main").append(internationalizeButton);
 

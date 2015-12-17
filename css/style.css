@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
@@ -107,7 +108,6 @@ a {
 }
 
 
-
 .orange {
   background-color: #f5ae23;
 }
@@ -131,7 +131,6 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #484848;
 }
@@ -145,6 +144,8 @@ a {
   padding: 10px;
 }
 
+
+
 .center-content {
   padding: 2.5% 5%;
 }
@@ -156,20 +157,17 @@ ul {
 .contacts {
   list-style-type: none;
   display: inline-block;
-  margin-right: 80px;
+  margin-right: 45px;
   padding-bottom: 15px;
 }
 
-#mapDiv {
-  height: 500px;
-  width: 500px;
-}
+
 
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  
 }
 
 .projectpic {
@@ -184,6 +182,7 @@ img {
 
 span {
   padding: 5px;
+  color: white;
 }
 
 #lets-connect {
@@ -192,35 +191,36 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
+
+
+
+@media only screen and (max-width: 1224px) {
   #lets-connect {
     margin-top: 5%;
   }
-  .contacts {
-  list-style-type: none;
-  display: inline-block;
-  padding-bottom: 15px;
-}
+  
 .projectpic {
     max-width: 75%;
   }
+  .contacts {
+  padding-bottom: 15px;
+  margin-right: 15px;
+}
+
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
-  .contacts {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 5px;
-}
+ 
 #skills-h3, #skills {
     display: inline-block;
   }
   .projectpic {
     max-width: 75%;
   }
+  
 
 }
 
@@ -237,7 +237,7 @@ span {
   .welcome-message {
     display: none;
   }
-  .contacts, #skills-h3 {
+  .contacts, #skills-h3, #footerContacts {
     display: block;
   }
 
@@ -250,14 +250,15 @@ span {
 }
 
 #mapDiv {
-  height: 400px;
+  height: 300px;
   width: 100%;
   padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
-  .biopic {
+  .biopic
+           {
     display: block;
   }
 }
