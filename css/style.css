@@ -169,6 +169,12 @@ ul {
   display: none;
 }
 
+.projectpic {
+
+ max-width: 47%;
+  
+}
+
 img {
   padding: 10px;
 }
@@ -192,6 +198,9 @@ span {
   display: inline-block;
   padding-bottom: 15px;
 }
+.projectpic {
+    max-width: 75%;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -206,6 +215,9 @@ span {
 #skills-h3, #skills {
     display: inline-block;
   }
+  .projectpic {
+    max-width: 75%;
+  }
 
 }
 
@@ -213,8 +225,11 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
+  .biopic, {
     width: 150px;
+  }
+  .projectpic {
+    max-width: 75%;
   }
   .welcome-message {
     display: none;
