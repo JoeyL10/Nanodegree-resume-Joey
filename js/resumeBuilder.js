@@ -155,7 +155,7 @@ var projects = {
 		"title": "Sample Project 3",
 		"dates": "2016",
 		"description": "Put some text here",
-		// "images": ["images/projectpic.jpg", "images/featwork.jpg"]
+		"images": ["images/projectpic.jpg", "images/featwork.jpg"]
 
 	}
 ]
