@@ -194,7 +194,7 @@ projects.display();
 
 
 
-
+$("#mapDiv").append(googleMap);
 
 
 //*** To give the option to capitalize last name after adding a button in index.html***//
