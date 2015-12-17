@@ -23,6 +23,9 @@ var HTMLgithub = '<li class="flex-item contacts"><span class="orange-text">githu
 var HTMLblog = '<li class="flex-item contacts"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item contacts"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
+// <a href="mailto:info@example.com">mail link</a>
+
+
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
@@ -44,7 +47,7 @@ var HTMLprojectImage = '<img src="%data%" class="projectpic">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="https://www.ucf.edu">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDegree = ' - %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';

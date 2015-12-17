@@ -11,7 +11,7 @@ var bio = {
 	"role" : "Web Developer",
 	"contacts" : {
 		"mobile": "941-685-9888",
-		"email": "joe.laird1@gmail.com",
+		"email": "joe.laird1@gmail.com",   
 		"github": "JoeyL10",
 		"twitter": "@joe_laird1",
 		"location": "Lake Mary, FL"
@@ -20,7 +20,7 @@ var bio = {
 	"skills": [
 		"Finance", "CSS", "Design", "Javascript"
 	],
-	"bioPic" : "images/joey.jpg"
+	"bioPic" : "srcimages/joey-large.jpg"
 	
 };
 
@@ -193,8 +193,8 @@ var projects = {
 	{
 		"title": "My Portfolio Site",
 		"dates": "2015",
-		"description": "My portfolio site was my first project and it was built using responsive design fundamentals.  It is being hosted on Github and includes links to my projects that came after.",
-		"images": ["images/projectpic.jpg", "images/featwork.jpg"]
+		"description": "My portfolio site was my first project and it was built using responsive design fundamentals that I learned through Udacity.  It is being hosted on Github and includes links to future projects.",
+		"images": ["srcimages/projectpic-large.jpg", "srcimages/featwork-large.jpg"]
 	},
 	
 		//*** Placeholder for future projects ***//
