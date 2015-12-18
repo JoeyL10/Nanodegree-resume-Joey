@@ -119,7 +119,8 @@ function initializeMap() {
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js. 
   */
-  map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions);
+  map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions); 
+
 
 
   /*
@@ -176,10 +177,25 @@ function initializeMap() {
       content: name
     });
 
+
+
+    
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      map.setZoom(5);
+      map.setCenter(marker.getPosition());
     });
+
+    
+      var infowindow = new google.maps.InfoWindow({
+        content:"I've been in this area for nearly 15 years!"
+        });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+        });
+
 
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
@@ -190,6 +206,10 @@ function initializeMap() {
     map.setCenter(bounds.getCenter());
     
   }
+
+
+
+
 
   /*
   callback(results, status) makes sure the search returned results for a location.
