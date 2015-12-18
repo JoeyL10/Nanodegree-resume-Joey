@@ -153,7 +153,7 @@ var work = {
 		"title": "Associate in Government P&S",
 		"location": "Lake Mary, FL",
 		"dates": "2007-2009",
-		"description": "Provide post-trade processing support to clients who trade Government bonds such as treasuries, agencies and mortgaged-backed securities."
+		"description": "Provide post-trade processing support to clients who trade Government bonds such as treasuries, agencies and mortgage-backed securities."
 		}, 
 
 
