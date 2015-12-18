@@ -91,7 +91,22 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  
+
+
+
 }
+
+
+a:hover {
+  text-decoration: underline;
+  color: #ffa500;
+  
+
+}
+
+
+
 
 .welcome-message {
   font-style: italic;
@@ -189,6 +204,10 @@ span {
   text-align: center;
 }
 
+
+
+
+
 /* Media queries to handle various device widths */
 
 
@@ -269,3 +288,5 @@ span {
     display: block;
   }
 }
+
+
