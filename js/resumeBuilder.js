@@ -84,13 +84,13 @@ var education = {
 	],
 
 	"onlineClasses": [
-				{
-				"title": ["Intro to HTML and CSS", " Javascript Basics", " Responsive Web Design Fundamentals"],
-				"school": "Udacity",
-				"dates": "2015-2016",
-				"url": "www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-				 
-			}
+		{
+		"title": ["Intro to HTML and CSS", " Javascript Basics", " Responsive Web Design Fundamentals"],
+		"school": "Udacity",
+		"dates": "2015-2016",
+		"url": "www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		 
+	}
 		]
 };
 
