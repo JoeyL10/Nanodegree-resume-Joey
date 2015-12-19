@@ -102,10 +102,96 @@ a {
 
 
 
+.worklink {
+    position: relative;
+    display: inline-block;
+    margin: 15px 5px;
+    outline: none;
+    color: #1199c3;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+ 
+
+
+/* Border switch learned through a demo on http://tympanus.net/codrops/2013/08/06/creative-link-effects */
+.worklink {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.worklink::before,
+.worklink::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #1199c3;
+    content: '';
+    opacity: 0.4;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.worklink::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    
+}
+
+.worklink::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+
+    
+}
+
+.worklink:hover::before,
+.worklink:hover::after,
+.worklink:focus::before,
+.worklink:focus::after {
+    opacity: 1;
+    background: #f5ae23;
+    
+}
+
+.worklink:hover::before,
+.worklink:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.worklink:hover::after,
+.worklink:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
 
 a:hover {
-    text-decoration: underline;
-    color: #ffa500;
+    
+    color: #f5ae23;
 }
 
 .welcome-message {
@@ -127,6 +213,11 @@ a:hover {
 
 .orange-text {
     color: #f5ae23;
+}
+
+ .title-text {
+
+    padding-bottom: 20px;
 }
 
 .white-text {

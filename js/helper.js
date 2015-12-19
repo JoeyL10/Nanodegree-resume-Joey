@@ -33,8 +33,8 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a class="worklink" href="http://www.pershing.com">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<a class="worklink" href="http://www.pershing.com"</a>%data%';
+var HTMLworkTitle = '<div class="orange-text title-text">%data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
