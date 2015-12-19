@@ -92,18 +92,26 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
-  
-
-
 
 }
+
+
+/**** Tried to change work links to inline blocks so entire row was not
+ active link but both links would not format evenly with below code ***/
+/*
+.worklink {
+
+  display: inline-block;
+  margin: 20px 0 10px -60px;
+} */
+
+
 
 
 a:hover {
   text-decoration: underline;
   color: #ffa500;
   
-
 }
 
 

@@ -20,15 +20,15 @@ var bio = {
 	"skills": [
 		"Finance", "CSS", "Design", "Javascript"
 	],
-	"bioPic" : "srcimages/joey-large.jpg"
+	"biopic" : "srcimages/joey-large.jpg"
 	
 };
 
 function displayBio() {
 
-var name = "Joey Laird"
+var name = "Joey Laird";
 var formattedName = HTMLheaderName.replace("%data%", name);
-var role = "Web Developer"
+var role = "Web Developer";
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
@@ -45,7 +45,7 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#header, #footerContacts").append(formattedLocation);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedWelcome);
-var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedPic);
 
 
@@ -96,7 +96,8 @@ var education = {
 
 
 function displayEducation() {
- for (school in education.schools) {
+ for (var school in education.schools) {
+   if(education.schools.length > 0) {
  	$("#education").append(HTMLschoolStart);
 
  	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -110,7 +111,7 @@ function displayEducation() {
  	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
  	$(".education-entry:last").append(formattedMajor);
  }
-
+}
 
 }
 displayEducation();
@@ -119,7 +120,8 @@ displayEducation();
 /*** function to display online classes **/
 
 function displayOnlineClasses() {
- for (course in education.onlineClasses) {
+ for (var course in education.onlineClasses) {
+   if(education.onlineClasses.length > 0) {
  	$("#education").append(HTMLonlineClasses);
 
  	var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[course].title);
@@ -132,6 +134,7 @@ function displayOnlineClasses() {
  	$(".online-entry:last").append(formattedOnlineUrl);
  }
 
+}
 
 }
 displayOnlineClasses();
@@ -169,7 +172,8 @@ var work = {
 
 function displayWork() {
 
-for(job in work.jobs) {
+for(var job in work.jobs) {
+  if(work.jobs.length > 0) {
 	$("#workExperience").append(HTMLworkStart);	
 
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -183,7 +187,7 @@ for(job in work.jobs) {
 	$(".work-entry:last").append(formattedLocation);
 	$(".work-entry:last").append(formattedDescription);	  
 }
-
+}
 }
 
 displayWork();
@@ -192,7 +196,7 @@ var projects = {
 	"projects": [
 	{
 		"title": "My Portfolio Site",
-		"dates": "2015",
+		"dates": 2015,
 		"description": "My portfolio site was my first project and it was built using responsive design fundamentals that I learned through Udacity.  It is being hosted on Github and includes links to future projects.",
 		"images": ["srcimages/projectpic-large.jpg", "srcimages/featwork-large.jpg"]
 	},
@@ -223,7 +227,8 @@ var projects = {
 
 projects.display = function() {
 
-	for(project in projects.projects) {
+	for(var project in projects.projects) {
+	  if(projects.projects.length > 0) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -233,18 +238,19 @@ projects.display = function() {
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 	
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
+		
+			for (var image in projects.projects[project].images) {
+				if (projects.projects[project].images.length > 0) {
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
 			}
 
 		}
-		
+		}
 		
 	}
 
-}
+};
 
 projects.display();
 
