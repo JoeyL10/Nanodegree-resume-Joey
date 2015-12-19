@@ -53,10 +53,10 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3><div class="online-entry"</div>';
-var HTMLonlineTitle = '<a href="https://udacity.com">%data%';
+var HTMLonlineTitle = '<a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<br><a href="https://www.udacity.com">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

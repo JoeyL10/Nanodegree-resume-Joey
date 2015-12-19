@@ -89,7 +89,7 @@ var education = {
 		"title": ["Intro to HTML and CSS", " Javascript Basics", " Responsive Web Design Fundamentals"],
 		"school": "Udacity",
 		"dates": 2016,
-		"url": "www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		"url": "www.udacity.com"
 		 
 	}
 		]
@@ -141,12 +141,6 @@ function displayOnlineClasses() {
 displayOnlineClasses();
 
 
-
-// var HTMLonlineClasses = '<h3>Online Classes</h3>';
-// var HTMLonlineTitle = '<a href="#">%data%';
-// var HTMLonlineSchool = ' - %data%</a>';
-// var HTMLonlineDates = '<div class="date-text">%data%</div>';
-// var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 
 var work = {
