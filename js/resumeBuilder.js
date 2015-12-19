@@ -78,7 +78,8 @@ var education = {
 		"location": "Orlando, FL",
 		"degree": "BSBA",
 		"major": ["Accounting", " Finance"],
-		"dates": "2002-2006"
+		"dates": 2006,
+		"url": "https://www.ucf.edu"
 		
 	}
 	],
@@ -87,7 +88,7 @@ var education = {
 		{
 		"title": ["Intro to HTML and CSS", " Javascript Basics", " Responsive Web Design Fundamentals"],
 		"school": "Udacity",
-		"dates": "2015-2016",
+		"dates": 2016,
 		"url": "www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 		 
 	}
@@ -196,7 +197,7 @@ var projects = {
 	"projects": [
 	{
 		"title": "My Portfolio Site",
-		"dates": 2015,
+		"dates": "2015-2016",
 		"description": "My portfolio site was my first project and it was built using responsive design fundamentals that I learned through Udacity.  It is being hosted on Github and includes links to future projects.",
 		"images": ["srcimages/projectpic-large.jpg", "srcimages/featwork-large.jpg"]
 	},
