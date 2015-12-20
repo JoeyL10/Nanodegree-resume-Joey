@@ -14,6 +14,7 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
+
 .clear-fix {
     overflow: auto;
 }
@@ -90,17 +91,19 @@ a {
     display: block;
 }
 
+.email {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 5px;
 
-/**** Tried to change work links to inline blocks so entire row was not
- active link but both links would not format evenly with below code ***/
-/*
-.worklink {
+}
 
-  display: inline-block;
-  margin: 20px 0 10px -60px;
-} */
+.email:hover {
+       color: #f5ae23
+    }
 
 
+/* Border switch effects */
 
 .worklink {
     position: relative;
@@ -116,8 +119,6 @@ a {
 
  
 
-
-/* Border switch learned through a demo on http://tympanus.net/codrops/2013/08/06/creative-link-effects */
 .worklink {
     padding: 0 20px;
     height: 45px;
@@ -135,7 +136,7 @@ a {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    pointer-events: none;
+    
 }
 
 .worklink::before {
@@ -261,6 +262,7 @@ ul {
     display: inline-block;
     margin-right: 45px;
     padding-bottom: 15px;
+
 }
 
 .biopic {
@@ -278,7 +280,7 @@ img {
 }
 
 span {
-    padding: 5px;
+    padding-right: 8px;
     color: white;
 }
 
@@ -294,12 +296,12 @@ span {
 
 
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1225px) {
  
     .contacts {
         padding-bottom: 15px;
-        margin-right: 75px;
-    };
+        margin-right: 80px;
+    }
 }
 
 @media only screen and (max-width: 1224px) {
@@ -311,10 +313,6 @@ span {
         max-width: 75%;
     }
 
-    .contacts {
-        padding-bottom: 15px;
-        margin-right: 15px;
-    };
 }
 
 @media only screen and (max-width:900px) {
@@ -328,7 +326,7 @@ span {
 
     .projectpic {
         max-width: 75%;
-    };
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -350,7 +348,10 @@ span {
 
     .contacts, #skills-h3, #footerContacts {
         display: block;
-    };
+    }
+    #lets-connect {
+        text-align: left;
+    }
 }
 
 #map {
@@ -369,5 +370,5 @@ span {
     #skills-h3,
   .biopic {
         display: block;
-    };
+    }
 }
