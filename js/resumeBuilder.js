@@ -25,7 +25,7 @@ bio.display = function() {
 
     var name = "Joey Laird";
     var formattedName = HTMLheaderName.replace("%data%", name);
-    var role = "Web Developer";
+    var role = "   Web Developer";
     var re = /%data%/g;
     var formattedRole = HTMLheaderRole.replace("%data%", role);
     $("#header").prepend(formattedRole);
