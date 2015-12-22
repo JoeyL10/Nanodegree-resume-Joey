@@ -17,7 +17,7 @@ var bio = {
     "skills": [
         "Finance", "CSS", "Design", "Javascript"
     ],
-    "biopic": "srcimages/joey-large.jpg"
+    "biopic": "images/git.jpg"
 
 };
 
