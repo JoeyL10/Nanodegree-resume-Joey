@@ -193,16 +193,13 @@ function initializeMap() {
         });
 
 
-
-
-
-    // this is where the pin actually gets added to the map.
-    // bounds.extend() takes in a map location object
-    bounds.extend(new google.maps.LatLng(lat, lon));
-    // fit the map to the new marker
-    map.fitBounds(bounds);
-    // center the map
-    map.setCenter(bounds.getCenter());
+    // // this is where the pin actually gets added to the map.  I commented this out so the zoom would be set at southeastern United States
+    // // bounds.extend() takes in a map location object
+    // bounds.extend(new google.maps.LatLng(lat, lon));
+    // // fit the map to the new marker
+    // map.fitBounds(bounds);
+    // // center the map
+    // map.setCenter(bounds.getCenter());
     
   }
 
