@@ -111,9 +111,11 @@ function initializeMap() {
 
   var locations;
 
-  var mapOptions = {
-    disableDefaultUI: true
-  };
+ var mapOptions = {
+      center: new google.maps.LatLng(28.756219, -81.351410),
+      zoom: 5,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
 
   /* 
   For the map to be displayed, the googleMap var must be
@@ -179,27 +181,19 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
-      map.setZoom(5);
+      map.setZoom(7);
       map.setCenter(marker.getPosition());
     });
 
     
       var infowindow = new google.maps.InfoWindow({
-        content:"I've been in this area for nearly 15 years!"
+        content: name
         });
 
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
         });
 
-
-    // // this is where the pin actually gets added to the map.  
-    // // bounds.extend() takes in a map location object
-    // bounds.extend(new google.maps.LatLng(lat, lon));
-    // // fit the map to the new marker
-    // map.fitBounds(bounds);
-    // // center the map
-    // map.setCenter(bounds.getCenter());
     
   }
 
